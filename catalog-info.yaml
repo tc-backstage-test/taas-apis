@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: taas-apis
+  description: An example of a Backstage application.
+  annotations:
+    github.com/project-slug: tc-backstage-test/taas-apis
+    circleci.com/project-slug: github/tc-backstage-test/taas-apis
+spec:
+  type: service
+  owner: backstage-dev
+  lifecycle: experimental
+  providesApis:
+    - taas-apis
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: taas-apis
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:eisbilir
+  definition:
+    $text: https://github.com/tc-backstage-test/challenge-api/blob/dev/docs/swagger.yaml
