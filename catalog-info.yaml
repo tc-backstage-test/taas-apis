@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: challenge-api
+  tags:
+    - javascript
+  annotations:
+    github.com/project-slug: tc-backstage-test/challenge-api
+spec:
+  type: service
+  owner: backstage-dev
+  lifecycle: production
